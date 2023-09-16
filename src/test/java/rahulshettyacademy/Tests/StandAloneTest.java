@@ -2,6 +2,7 @@ package rahulshettyacademy.Tests;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.stream.Stream;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
@@ -41,6 +42,7 @@ public class StandAloneTest {
 
 		wait.until(ExpectedConditions
 				.invisibilityOf(driver.findElement(By.xpath("//div[contains(@class,'ng-animating')]"))));
+		Thread.sleep(3000);
 		WebElement cartBtn = driver
 				.findElement(By.xpath("//button[contains(@class,'btn btn-custom') and contains(text(),'Cart')]"));
 		wait.until(ExpectedConditions.elementToBeClickable(cartBtn));
